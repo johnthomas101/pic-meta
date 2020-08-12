@@ -17,8 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #777;  
-  color: #eeeeee;
-  font-size: 24px;
+  color: #999;
+  font-size: 20px;
 }
 </style>

@@ -1,24 +1,22 @@
 <template>
   <div class="ImageUploadContainer">
-    <div class="fileDragBlock">
-      <div>
-        <input class="fileInput" type="file" name="files[]" id="FileInput" />
-        <label for="FileInput">
-          <div class="uploadButton">Browse file</div>
-        </label>
-      </div>
-      <!-- {
-      this.isAdvancedUpload() &&
-      <div>
-        <div class="{styles.orText}">or</div>
-        <div class="{styles.dragText}">Drop your file here</div>
-      </div>
-      }-->
+    <!-- <div class="fileDragBlock"> -->
+    <div>
+      <input class="fileInput" type="file" name="files[]" id="FileInput" />
+      <label for="FileInput">
+        <div class="uploadButton">Select Image</div>
+      </label>
+    </div>
+    <div>OR</div>
+    <div>
+      <input type="text" />
     </div>
   </div>
 </template>
 
 <script>
+import exif from 'exif-js';
+console.log(exif.getData());
 export default {
   name: "ImageInput",
   props: {
@@ -28,19 +26,19 @@ export default {
 </script>
 
 <style scoped>
-.ImageUploadContainer{
-    width: 40%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.ImageUploadContainer {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .uploadButton {
   width: 170px;
   height: 40px;
   background-color: #007dba;
   border-radius: 4px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   font-weight: 900;
   font-style: normal;
@@ -67,11 +65,11 @@ export default {
 .orText {
   font-size: 16px;
   font-weight: normal;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 10px;
 }
 .dragText {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   font-weight: bold;
   font-style: normal;
